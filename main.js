@@ -41,7 +41,7 @@ $(document).ready(function(){
             return resposta.json()
         })
         .then(function(json){
-            const logradouro = jason.logradouro;
+            const logradouro = json.logradouro;
             const bairro = json.bairro;
             const cidade = json.localidade;
             const estado = json.uf;
@@ -61,7 +61,7 @@ $(document).ready(function(){
 
     $('#formulario-pedido').submit(function(evento){
         evento.preventDefault();
-        
+
         if ($('#nome').val().length ==0){
             throw new Error('Digite o nome');
         }
